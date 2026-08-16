@@ -53,6 +53,8 @@
   services.power-profiles-daemon.enable = true;
   services.flatpak.enable = true;
 
+  programs.firefox.enable = true;
+
   # just don't change pls
   system.stateVersion = "26.05"; # Did you read the comment?
 }
