@@ -1,15 +1,6 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
-
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
@@ -19,8 +10,6 @@
 
   # latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  hardware.tuxedo-drivers.settings.charging-profile = "stationary";
 
   programs.nix-ld.enable = true;
 
@@ -33,27 +22,14 @@
   };
   services.blueman.enable = true;
 
-  programs.hyprland.enable = true;
-  services.displayManager.gdm.enable = true;
-  programs.waybar.enable = true;
-  services.dunst.enable = true;
-
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
-
   programs.bash.shellAliases = {
-    ns = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
+    ns = "sudo nixos-rebuild switch --flake /etc/nixos#${config.networking.hostName}";
     nup = "sudo nix flake update --flake /etc/nixos";
   };
 
   time.timeZone = "Europe/Berlin";
   services.printing.enable = true;
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
   services.libinput.enable = true;
-
   services.playerctld.enable = true;
 
   # Lets noctalia see battery
@@ -65,34 +41,6 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-    neovim
-    kitty
-    brave
-    hyprlauncher
-    btop
-    fastfetch
-    obsidian
-    onlyoffice-desktopeditors
-    hyprpaper
-    git
-    brightnessctl
-    vlc
-    nautilus
-    hyprshot
-    pavucontrol
-    gh
-    lazygit
-    emacs
-    extremetuxracer
-    kdePackages.kdeconnect-kde
-    cargo
-    unzip
-    gnumake
-    zed-editor
-    noctalia-shell
-  ];
 
   programs.mtr.enable = true;
   programs.gnupg.agent = {
@@ -107,6 +55,4 @@
 
   # just don't change pls
   system.stateVersion = "26.05"; # Did you read the comment?
-
 }
-
