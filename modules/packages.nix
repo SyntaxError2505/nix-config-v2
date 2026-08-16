@@ -23,5 +23,6 @@
     gnumake
     zed-editor
     noctalia-shell
+    gcc
   ];
 }
