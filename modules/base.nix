@@ -3,6 +3,7 @@
 {
   imports = [
     ./apps/grub.nix
+    ./services
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -11,15 +12,6 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   programs.nix-ld.enable = true;
-
-  # bluetooth
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.settings.general = {
-    Experimental = true;
-    FastConnectable = true;
-    Enable = "Source,Sink,Media,Socket";
-  };
-  services.blueman.enable = true;
 
   programs.bash.shellAliases = {
     ns = "sudo nixos-rebuild switch --flake /etc/nixos#${config.networking.hostName}";
