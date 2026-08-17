@@ -27,6 +27,11 @@
     extraGroups = [ "wheel" ];
   };
 
+  home-manager.users.sascha = {
+    imports = [ ./apps/alacritty.nix ];
+    home.stateVersion = config.system.stateVersion;
+  };
+
   programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;

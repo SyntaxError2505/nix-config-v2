@@ -9,8 +9,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }: {
-    # Every directory under ./hosts becomes a hostname
+  outputs = { self, nixpkgs, home-manager, ... }: {
     nixosConfigurations = let
       hosts = builtins.attrNames (
         nixpkgs.lib.filterAttrs (_: type: type == "directory") (builtins.readDir ./hosts)
@@ -19,7 +18,14 @@
     in builtins.listToAttrs (map (name: {
       name = name;
       value = nixpkgs.lib.nixosSystem {
-        modules = [ ./hosts/${name} ];
+        modules = [
+          ./hosts/${name}
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+          }
+        ];
       };
     }) hosts);
   };
