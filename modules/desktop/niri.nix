@@ -7,5 +7,6 @@
     environment.systemPackages = with pkgs; [
         fuzzel
         noctalia-shell
+        brightnessctl
     ];
 }
