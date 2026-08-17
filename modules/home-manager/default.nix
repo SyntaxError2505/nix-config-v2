@@ -3,7 +3,7 @@
 {
     home-manager.users.sascha = {
         imports = [ 
-            ./apps/alacritty.nix
+            ./alacritty.nix
         ];
         home.stateVersion = config.system.stateVersion;
     };
