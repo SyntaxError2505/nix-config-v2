@@ -6,7 +6,7 @@
     ../../modules/base.nix
     ../../modules/packages.nix
     # Swap this import to change the desktop environment
-    ../../modules/desktop/hyprland.nix
+    ../../modules/desktop/niri.nix
   ];
 
   networking.hostName = "thinkpad";
