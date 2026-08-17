@@ -16,8 +16,6 @@
     nup = "sudo nix flake update --flake /etc/nixos";
   };
 
-  time.timeZone = "Europe/Berlin";
-  services.printing.enable = true;
   services.libinput.enable = true;
   services.playerctld.enable = true;
 
