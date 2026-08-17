@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./apps/grub.nix
+    ./apps
     ./services
   ];
 
