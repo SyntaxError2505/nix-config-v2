@@ -18,4 +18,6 @@
     pavucontrol
     brightnessctl
   ];
+
+  xdg.portal.enable = true;
 }

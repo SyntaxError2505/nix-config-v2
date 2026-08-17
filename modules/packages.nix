@@ -25,7 +25,6 @@
     noctalia-shell
     gcc
     tmux
-    xdg-desktop-portal
   ];
 
   fonts.packages = with pkgs; [
