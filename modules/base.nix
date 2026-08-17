@@ -6,11 +6,9 @@
     ./services
   ];
 
+  # Miscelanius nix stuff
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
   programs.nix-ld.enable = true;
 
   programs.bash.shellAliases = {
@@ -31,16 +29,12 @@
     extraGroups = [ "wheel" ];
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
   };
 
-  services.openssh.enable = true;
-  networking.firewall.enable = false;
   services.power-profiles-daemon.enable = true;
   services.flatpak.enable = true;
 
