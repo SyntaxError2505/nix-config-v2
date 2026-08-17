@@ -3,7 +3,6 @@
 {
   programs.hyprland.enable = true;
   services.displayManager.gdm.enable = true;
-  programs.waybar.enable = true;
 
   services.pipewire = {
     enable = true;
@@ -17,5 +16,6 @@
     hyprpaper
     hyprshot
     pavucontrol
+    brightnessctl
   ];
 }

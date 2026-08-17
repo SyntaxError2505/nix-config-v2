@@ -11,7 +11,6 @@
     obsidian
     onlyoffice-desktopeditors
     git
-    brightnessctl
     vlc
     nautilus
     gh
