@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [
+    "./apps/grub.nix"
+  ];
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # latest kernel
