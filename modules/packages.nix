@@ -24,6 +24,7 @@
     zed-editor
     noctalia-shell
     gcc
+    tmux
   ];
 
   fonts.packages = with pkgs; [
