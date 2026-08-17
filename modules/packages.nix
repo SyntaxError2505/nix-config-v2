@@ -23,7 +23,10 @@
     gnumake
     zed-editor
     noctalia-shell
-    nerd-fonts.iosevka
     gcc
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.iosevka
   ];
 }
