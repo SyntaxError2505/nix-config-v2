@@ -9,6 +9,8 @@
           x = 8;
           y = 8;
         };
+
+        decorations = "None";
       };
       font = {
         size = 12.0;
