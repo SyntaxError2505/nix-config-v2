@@ -3,6 +3,7 @@
 {
   imports = [
     ./apps
+    ./home-manager
     ./services
   ];
 
@@ -25,11 +26,6 @@
   users.users.sascha = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-  };
-
-  home-manager.users.sascha = {
-    imports = [ ./apps/alacritty.nix ];
-    home.stateVersion = config.system.stateVersion;
   };
 
   programs.mtr.enable = true;
