@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "crane": {
+      "locked": {
+        "lastModified": 1783203018,
+        "narHash": "sha256-G6R9IT/xwFuu+CYBWDUAok6AdC4ERC4ZfPPFtEpxnZE=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "80db5bdc391be8a1794f6d8a2d56e3a84ebcede2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -20,7 +35,40 @@
         "type": "github"
       }
     },
+    "kopuz": {
+      "inputs": {
+        "crane": "crane",
+        "nixpkgs": "nixpkgs",
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1786995226,
+        "narHash": "sha256-XlMw3YuSBSBubJ8yI4BCxTpiwU9PMqjwaxNKCQ2qRrM=",
+        "owner": "temidaradev",
+        "repo": "kopuz",
+        "rev": "a8d6445d77d24e8d1f279788b8ca1d950de1f1fd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "temidaradev",
+        "repo": "kopuz",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1783776592,
+        "narHash": "sha256-+GVwKnbbSmf4cWMJyRzvw8H5yFknmkLoPD5v6snqPzo=",
+        "rev": "e7a3ca8092b61ff85b6a45bf863ea2b2d6a661b3",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1032869.e7a3ca8092b6/nixexprs.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1786862985,
         "narHash": "sha256-FBJRXmbGXiSUDvYEbfLYRkckayyZ6SK1UEqhCrIZ2Cs=",
@@ -39,7 +87,29 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "kopuz": "kopuz",
+        "nixpkgs": "nixpkgs_2"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "kopuz",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783921439,
+        "narHash": "sha256-DsSIQSRMrLOz40LrGZ03sp2RlJ9sz3wKpd8XPTOzXnw=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "e013376c32a8fcf07ddb6ec71739552bc118b7bd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     }
   },
