@@ -1,10 +1,21 @@
 { pkgs, ... }:
 
 {
-    virtualisation.libvirtd.enable = true;
+    virtualisation.libvirtd = {
+        enable = true;
+        qemu.runAsRoot = true;
+    };
+
+    programs.virt-manager.enable = true;
+
+    users.users.YOUR_USERNAME.extraGroups = [
+        "libvirtd"
+        "kvm"
+    ];
+
 
     environment.systemPackages = with pkgs; [
-        virt-manager
-        qemu
+        dnsmasq
+        virtiofsd
     ];
 }
