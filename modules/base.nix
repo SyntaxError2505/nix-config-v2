@@ -25,7 +25,7 @@
 
   users.users.sascha = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "libvirt" ];
   };
 
   programs.mtr.enable = true;
