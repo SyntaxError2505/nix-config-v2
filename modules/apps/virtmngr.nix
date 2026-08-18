@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+    boot.kernelModules = [
+        "kvm-intel"
+        "kvm"
+    ];
+    
     virtualisation.libvirtd = {
         enable = true;
         qemu.runAsRoot = true;
@@ -8,7 +13,7 @@
 
     programs.virt-manager.enable = true;
 
-    users.users.YOUR_USERNAME.extraGroups = [
+    users.users.sascha.extraGroups = [
         "libvirtd"
         "kvm"
     ];
