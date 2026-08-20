@@ -9,7 +9,6 @@
         fuzzel
         noctalia-shell
         brightnessctl
-        # niri does not like straight xwayland?
-        xwayland-satelite
+        xwayland-satellite
     ];
 }
