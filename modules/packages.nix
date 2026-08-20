@@ -25,6 +25,7 @@
     noctalia-shell
     gcc
     tmux
+    python
   ];
 
   fonts.packages = with pkgs; [
