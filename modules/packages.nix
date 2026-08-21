@@ -26,6 +26,7 @@
     gcc
     tmux
     python3
+    vim
   ];
 
   fonts.packages = with pkgs; [
