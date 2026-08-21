@@ -6,5 +6,6 @@
         ./firefox.nix
         ./virtmngr.nix
         ./kopuz.nix
+        ./coding.nix
     ];
 }
