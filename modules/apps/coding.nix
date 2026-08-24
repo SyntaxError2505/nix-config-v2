@@ -14,5 +14,6 @@
         gcc
         python3
         vim
+        nodejs
     ];
 }
