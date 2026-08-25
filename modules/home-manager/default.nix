@@ -2,8 +2,10 @@
 
 {
     home-manager.users.sascha = {
-        imports = [ 
+        imports = [
             ./alacritty.nix
+            ./hyprland.nix
+            ./niri.nix
         ];
         home.stateVersion = config.system.stateVersion;
     };
