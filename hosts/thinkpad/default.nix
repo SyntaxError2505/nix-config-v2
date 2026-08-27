@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ../../modules/base.nix
     ../../modules/packages.nix
-    ../../modules/desktop/hyprland.nix
+    ../../modules/desktop/kde.nix
   ];
 
   networking.hostName = "thinkpad";
