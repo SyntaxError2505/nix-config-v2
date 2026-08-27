@@ -7,5 +7,6 @@
         ./pipewire.nix
         ./xdg.nix
         ./tailscale.nix
+        ./printing.nix
     ];
 }
