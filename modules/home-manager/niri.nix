@@ -126,8 +126,8 @@
           }
           {
             "Mod+D" = {
-              _props."hotkey-overlay-title" = "Run an Application: fuzzel";
-              spawn = "fuzzel";
+              _props."hotkey-overlay-title" = "Run an Application: noctalia launcher";
+              spawn = [ "noctalia-shell" "ipc" "call" "launcher" "toggle" ];
             };
           }
           {

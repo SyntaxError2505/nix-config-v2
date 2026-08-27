@@ -6,7 +6,6 @@
     environment.sessionVariables.XDG_CURRENT_DESKTOP = "niri";
 
     environment.systemPackages = with pkgs; [
-        fuzzel
         noctalia-shell
         brightnessctl
         xwayland-satellite
