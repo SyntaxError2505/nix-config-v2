@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ../services
+  ];
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;

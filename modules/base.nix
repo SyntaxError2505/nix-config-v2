@@ -4,7 +4,6 @@
   imports = [
     ./apps
     ./home-manager
-    ./services
   ];
 
   # Miscelanius nix stuff

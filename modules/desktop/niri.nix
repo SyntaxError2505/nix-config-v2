@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+    imports = [
+        ../services
+    ];
     programs.niri.enable = true;
     services.displayManager.gdm.enable = true;
     environment.sessionVariables.XDG_CURRENT_DESKTOP = "niri";
