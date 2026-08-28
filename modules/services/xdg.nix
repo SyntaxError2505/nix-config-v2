@@ -7,7 +7,7 @@
     extraPortals = with pkgs; [
       xdg-desktop-portal-gnome
       xdg-desktop-portal-hyprland
-      xdg-desktop-portal-kde
+      kdePackages.xdg-desktop-portal-kde
       xdg-desktop-portal-gtk
     ];
 
