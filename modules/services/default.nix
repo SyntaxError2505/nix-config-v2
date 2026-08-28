@@ -8,5 +8,6 @@
         ./xdg.nix
         ./tailscale.nix
         ./printing.nix
+        ./samba.nix
     ];
 }
