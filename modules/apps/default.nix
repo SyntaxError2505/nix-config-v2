@@ -7,5 +7,6 @@
         ./virtmngr.nix
         ./kopuz.nix
         ./coding.nix
+        ./dolphin.nix
     ];
 }
