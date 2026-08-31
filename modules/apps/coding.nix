@@ -15,5 +15,6 @@
         python3
         vim
         nodejs
+        opencode
     ];
 }
