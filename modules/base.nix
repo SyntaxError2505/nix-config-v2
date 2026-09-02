@@ -11,11 +11,6 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   programs.nix-ld.enable = true;
 
-  programs.bash.shellAliases = {
-    ns = "sudo nixos-rebuild switch --flake /etc/nixos#${config.networking.hostName}";
-    nup = "sudo nix flake update --flake /etc/nixos";
-  };
-
   services.libinput.enable = true;
   services.playerctld.enable = true;
 

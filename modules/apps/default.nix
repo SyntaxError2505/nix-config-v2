@@ -8,5 +8,6 @@
         ./kopuz.nix
         ./coding.nix
         ./dolphin.nix
+        ./shell.nix
     ];
 }
