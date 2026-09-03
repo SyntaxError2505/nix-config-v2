@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./gaming.nix
         ./grub.nix
         ./firefox.nix
         ./virtmngr.nix
