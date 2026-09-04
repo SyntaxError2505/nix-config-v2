@@ -16,5 +16,6 @@
         vim
         nodejs
         opencode
+        t3code
     ];
 }
