@@ -9,6 +9,6 @@
         ./tailscale.nix
         ./printing.nix
         ./samba.nix
-        ./a11y.nix
+        ./at-spi.nix
     ];
 }
