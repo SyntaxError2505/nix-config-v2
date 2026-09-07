@@ -28,16 +28,16 @@
       alsa-lib
       libxkbcommon
       expat
-      xorg.libX11
-      xorg.libXcomposite
-      xorg.libXdamage
-      xorg.libXext
-      xorg.libXfixes
-      xorg.libXrandr
-      xorg.libxcb
-      xorg.libXcursor
-      xorg.libXi
-      xorg.libXrender
+      libx11
+      libxcomposite
+      libxdamage
+      libxext
+      libxfixes
+      libxrandr
+      libxcb
+      libxcursor
+      libxi
+      libxrender
       fontconfig
       freetype
       libdrm
