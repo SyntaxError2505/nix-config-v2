@@ -10,5 +10,6 @@
         ./printing.nix
         ./samba.nix
         ./at-spi.nix
+        ./nix-ld.nix
     ];
 }

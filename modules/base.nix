@@ -9,7 +9,6 @@
   # Miscelanius nix stuff
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  programs.nix-ld.enable = true;
 
   services.libinput.enable = true;
   services.playerctld.enable = true;
