@@ -24,6 +24,7 @@
       cairo
       pango
       mesa
+      libgbm
       udev
       alsa-lib
       libxkbcommon
