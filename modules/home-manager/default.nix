@@ -3,7 +3,6 @@
 {
     home-manager.users.sascha = {
         imports = [
-            ./alacritty.nix
             ./hyprland.nix
             ./niri.nix
         ];
