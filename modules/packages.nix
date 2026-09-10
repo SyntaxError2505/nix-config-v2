@@ -7,8 +7,6 @@
     kitty
     btop
     fastfetch
-    obsidian
-    onlyoffice-desktopeditors
     vlc
     nautilus
     extremetuxracer
