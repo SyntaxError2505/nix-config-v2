@@ -79,6 +79,7 @@
         };
         "default-column-width" = { proportion = 0.5; };
         "focus-ring" = {
+          off = { };
           width = 2;
           "active-color" = "#7fc8ff";
           "inactive-color" = "#505050";
