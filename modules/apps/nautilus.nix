@@ -1,12 +1,17 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     nautilus
-    gvfs
-    gvfs-smb
+    (lib.mkForce gnome.gvfs)
     samba
   ];
+
+  # GVfs must be running as a dbus daemon for Nautilus to browse smb:// and other virtual filesystems.
+  services.gvfs = {
+    enable = true;
+    package = lib.mkForce pkgs.gnome.gvfs;
+  };
 
   # NetBIOS name resolution and SMB network browsing (legacy Windows/SMB hosts).
   # smbd/winbindd are disabled because we only want discovery/client access, not sharing.
