@@ -8,7 +8,7 @@
         ./virtmngr.nix
         ./kopuz.nix
         ./coding.nix
-        ./dolphin.nix
+        ./nautilus.nix
         ./shell.nix
     ];
 }

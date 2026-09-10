@@ -2,10 +2,9 @@
 
 {
   environment.systemPackages = with pkgs; [
-    kdePackages.dolphin
-    kdePackages.kio-extras
-    kdePackages.kio-fuse
-    kdePackages.kio-admin
+    nautilus
+    gvfs
+    gvfs-smb
     samba
   ];
 
@@ -22,6 +21,14 @@
   services.samba-wsdd = {
     enable = true;
     discovery = true;
+    openFirewall = true;
+  };
+
+  # mDNS/DNS-SD service discovery used by Nautilus to discover SMB and NFS shares
+  # on the local network (modern Windows, macOS, Linux NFS servers, etc.).
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
     openFirewall = true;
   };
 }

@@ -8,7 +8,6 @@
     btop
     fastfetch
     vlc
-    nautilus
     extremetuxracer
     kdePackages.kdeconnect-kde
     unzip
