@@ -10,5 +10,6 @@
         ./coding.nix
         ./nautilus.nix
         ./shell.nix
+        ./vpn.nix
     ];
 }
