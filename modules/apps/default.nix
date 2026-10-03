@@ -5,7 +5,7 @@
         ./gaming.nix
         ./grub.nix
         ./firefox.nix
-        ./virtmngr.nix
+        ./virtualization.nix
         ./kopuz.nix
         ./coding.nix
         ./nautilus.nix

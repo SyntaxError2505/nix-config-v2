@@ -18,6 +18,7 @@
         "kvm"
     ];
 
+    virtualisation.docker.enable = true;
 
     environment.systemPackages = with pkgs; [
         dnsmasq
