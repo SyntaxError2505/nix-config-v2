@@ -573,6 +573,21 @@
           {
             "Alt+Print" = { "screenshot-window" = { }; };
           }
+          # Ctrl+S copies a region straight to the clipboard and writes no file.
+          # Only Ctrl+Shift+S saves to disk (screenshot-path, plus clipboard).
+          # grim/slurp/wl-clipboard/libnotify come from modules/desktop/niri.nix.
+          {
+            "Ctrl+S" = {
+              _props."hotkey-overlay-title" = "Screenshot region to clipboard";
+              "spawn-sh" = ''g="$(slurp)" && grim -g "$g" - | wl-copy && notify-send -i image-x-generic "Screenshot copied" "Region is in your clipboard."'';
+            };
+          }
+          {
+            "Ctrl+Shift+S" = {
+              _props."hotkey-overlay-title" = "Screenshot region to file";
+              "spawn-sh" = ''g="$(slurp)" && d="$HOME/Pictures/Screenshots" && mkdir -p "$d" && f="$d/Screenshot from $(date '+%Y-%m-%d %H-%M-%S').png" && grim -g "$g" "$f" && wl-copy --type image/png < "$f" && notify-send -i "$f" "Screenshot saved" "$f"'';
+            };
+          }
 
           # --- misc ----------------------------------------------------
           {
