@@ -12,9 +12,5 @@
         noctalia-shell
         brightnessctl
         xwayland-satellite
-        grim         # region screenshots (Mod+S / Mod+Shift+S)
-        slurp        # region selection for grim
-        wl-clipboard # wl-copy
-        libnotify    # notify-send feedback
     ];
 }

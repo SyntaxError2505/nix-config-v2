@@ -573,20 +573,14 @@
           {
             "Alt+Print" = { "screenshot-window" = { }; };
           }
-          # Mod+S copies a region straight to the clipboard and writes no file.
-          # Only Mod+Shift+S saves to disk (screenshot-path, plus clipboard).
-          # grim/slurp/wl-clipboard/libnotify come from modules/desktop/niri.nix.
+          # Mod+S opens niri's built-in screenshot UI (pick region/window;
+          # Ctrl+C copies without saving, Space/Enter saves to screenshot-path).
+          # Mod+Shift+S saves the focused screen straight to screenshot-path.
           {
-            "Mod+S" = {
-              _props."hotkey-overlay-title" = "Screenshot region to clipboard";
-              "spawn-sh" = ''g="$(slurp)" && grim -g "$g" - | wl-copy && notify-send -i image-x-generic "Screenshot copied" "Region is in your clipboard."'';
-            };
+            "Mod+S" = { screenshot = { }; };
           }
           {
-            "Mod+Shift+S" = {
-              _props."hotkey-overlay-title" = "Screenshot region to file";
-              "spawn-sh" = ''g="$(slurp)" && d="$HOME/Pictures/Screenshots" && mkdir -p "$d" && f="$d/Screenshot from $(date '+%Y-%m-%d %H-%M-%S').png" && grim -g "$g" "$f" && wl-copy --type image/png < "$f" && notify-send -i "$f" "Screenshot saved" "$f"'';
-            };
+            "Mod+Shift+S" = { "screenshot-screen" = { }; };
           }
 
           # --- misc ----------------------------------------------------
