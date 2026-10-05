@@ -3,7 +3,6 @@
 {
     environment.systemPackages = with pkgs; [
         neovim
-        pi-coding-agent
         git
         gh
         lazygit

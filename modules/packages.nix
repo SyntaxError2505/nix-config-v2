@@ -13,6 +13,7 @@
     unzip
     noctalia-shell
     tmux
+    wl-clipboard
   ];
 
   fonts.packages = with pkgs; [
