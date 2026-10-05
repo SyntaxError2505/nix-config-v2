@@ -8,6 +8,7 @@
         lazygit
         cargo
         gnumake
+        emacs
         gcc
         python3
         vim
